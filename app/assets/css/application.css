@@ -1,0 +1,45 @@
+/* CSS Mini Reset */
+
+html, body, div, form, fieldset, legend, label
+{
+  margin: 0;
+  padding: 0;
+}
+
+table
+{
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+th, td
+{
+  text-align: left;
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6, th, td, caption { font-weight:normal; }
+
+img { border: 0; }
+
+/* end CSS Mini Reset */
+
+body {
+  font-size: 14px;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.site-header {
+  width: 100%;
+  padding: 30px 0;
+  text-align: center;
+  font-size: 40px;
+}
+
+.container {
+  margin: 5%;
+}
+.column {
+  width: 7%;
+  float: left;
+}
