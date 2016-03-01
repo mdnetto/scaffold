@@ -1,1 +1,1 @@
-<div class="site-header">Company HR Site</div>
+<div class="site-header">DVD RENTAL SITE</div>

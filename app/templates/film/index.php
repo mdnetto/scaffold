@@ -1,8 +1,8 @@
 <?
 
 echo "<div class='column'><p><b>Department</b></p>";
-foreach($data as $department) {
-  echo "<br>" . $department->dept_name . "</br>";
+foreach($data as $film) {
+  echo "<br>" . $film->dept_name . "</br>";
 }
 echo "</div>";
 
@@ -13,7 +13,7 @@ foreach($data as $count) {
 echo "</div>";
 
 echo "<div class='column'><p><b>Head Count</b></p>";
-foreach($data as $department) {
-  echo "<br>" . $department->dept_name . "</br>";
+foreach($data as $film) {
+  echo "<br>" . $film->dept_name . "</br>";
 }
 echo "</div>";

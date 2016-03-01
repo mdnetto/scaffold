@@ -1,0 +1,12 @@
+RewriteEngine On
+
+# js and css
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^.*js(.*\.js) /dvd_rental/app/assets/javascript$1    [NC,L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^.*css(.*\.css) /dvd_rental/app/assets/css$1    [NC,L]
+
+# php routes
+RewriteRule   ^film/([0-9]+)/?$  app/pages/film.php?id=$1     [NC,L]
+RewriteRule   ^actor/([0-9]+)/?$    app/pages/actor.php?id=$1       [NC,L]

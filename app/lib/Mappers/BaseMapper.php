@@ -1,9 +1,9 @@
 <?php
 
-namespace Company\Mappers;
+namespace Dvd_rental\Mappers;
 
-use \Company\Helpers\Connection;
-use \Company\Models\BaseModel;
+use \Dvd_rental\Helpers\Connection;
+use \Dvd_rental\Models\BaseModel;
 
 abstract class BaseMapper {
 
@@ -23,8 +23,8 @@ abstract class BaseMapper {
         return $model;
     }
 
-    public function find($id) {
-        $statement = $this->pdo->prepare("SELECT * FROM {$this->getTableName()} WHERE emp_id=?");
+    public function find($id, $col_name) {
+        $statement = $this->pdo->prepare("SELECT * FROM {$this->getTableName()} WHERE $col_name =?");
         $statement->execute([$id]);
         $result = $statement->fetch();
         return $this->hydrateModel($result);

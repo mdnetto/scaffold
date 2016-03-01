@@ -2,10 +2,10 @@
 
 namespace Dvd_rental\Controllers;
 
-class DepartmentController extends BaseController {
+class FilmController extends BaseController {
 
     protected function getResourceName() {
-        return "department";
+        return "film";
     }
 }
 

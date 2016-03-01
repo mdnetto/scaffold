@@ -17,14 +17,14 @@ abstract class BaseController {
         $this->render('index.php', $models);
     }
 
-    public function view($id) {
+    public function view($id, $col_name) {
         $mapper = $this->getMapperInstance();
-        $model = $mapper->find($id);
+        $model = $mapper->find($id, $col_name);
         $this->render('view.php', $model);
     }
 
     private function getMapperInstance() {
-        $class = 'Company\Mappers\\' . ucfirst($this->getResourceName()) . "Mapper";
+        $class = 'Dvd_rental\Mappers\\' . ucfirst($this->getResourceName()) . "Mapper";
         return new $class();
     }
 }
