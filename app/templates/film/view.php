@@ -1,3 +1,2 @@
 <?
-
-echo $data->title;
+echo $data->title . "</br>";

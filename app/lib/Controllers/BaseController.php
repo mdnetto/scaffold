@@ -6,7 +6,7 @@ abstract class BaseController {
 
     protected abstract function getResourceName();
 
-    public function render($template, $data) {
+    public function render($template, $data, $term = null) {
         $template = $this->getResourceName() . "/$template";
         include __DIR__ . "/../../templates/layout/application.php";
     }
@@ -23,8 +23,15 @@ abstract class BaseController {
         $this->render('view.php', $model);
     }
 
+    public function search($term) {
+      $mapper = $this->getMapperInstance();
+      $models = $mapper->searchForFilms($term);
+      $this->render('index.php', $models, $term);
+    }
+
     private function getMapperInstance() {
         $class = 'Dvd_rental\Mappers\\' . ucfirst($this->getResourceName()) . "Mapper";
         return new $class();
     }
 }
+
