@@ -2,6 +2,7 @@
 
 echo $search =
 "<div class='search'>
+    <p>What will you watch today, Michelle?</p>
     <form id='search_id' method='post' action='main'>
       <label for='search' class='search-icon' accesskey='/'></label>
       <input type='text' id='search' name='search_string' placeholder='Search for films, actresses and genres' autofocus='autofocus'>
@@ -11,16 +12,21 @@ echo $search =
 
 if ($data) {
     if  (!empty($term)) {
-        echo count($data) . " results for '" . $term. "' </br>";
+        $search_header = count($data) . " results for '$term'";
     } else {
-        echo "Showing all films </br>";
+        $search_header = "All films";
     }
+    echo "<p>$search_header ></p>";
     foreach($data as $film) {
-    echo "<br><div><p><a href='film/{$film->film_id}'>"
-        . $film->title . ' '
-        . $film->first_name . ' '
-        . $film->last_name . "</a></p></div>";
+    $rand_number = mt_rand(1, 31);
+    $title = strtolower($film->title);
+    echo "<div class='film_card'>
+            <a title=$title href='film/{$film->film_id}'>
+              <img src='app/assets/images/film/{$rand_number}.jpg'></img>
+              <p>$title<br>$$film->rental_rate</p>
+            </a>
+          </div>";
     }
 } else {
-      echo "We couldn't find any matches for '" . $term . "'";
+      echo "We couldn't find any matches for '$term'";
 }

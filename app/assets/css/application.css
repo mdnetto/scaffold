@@ -46,6 +46,10 @@ body {
   float: left;
 }
 
+.film_card {
+
+}
+
 .search {
   text-align: center;
 }
@@ -75,4 +79,45 @@ input#search {
   font-size: 14px;
   padding: 10px 10px 10px 38px;
   width: 30%;
+}
+
+.film_card {
+  width: 14.28%;
+  display: inline-block;
+  float: left;
+  color: #444;
+}
+
+.film_card a {
+  text-decoration: none;
+  color: #444;
+}
+
+.film_card p {
+  text-align: center;
+  margin-top: 2px;
+  text: no-wrap:
+}
+
+.film_card img {
+  border-radius: 2px;
+  height: 200px;
+  width: 135px;
+  display: block;
+  margin: 0 auto;
+}
+
+.film_card p:hover {
+  opacity:0.7;
+}
+
+.film_card img:hover,
+.film_card a:hover {
+  opacity: 0.7;
+  filter: alpha(opacity=40);
+  -webkit-transition: all 500ms ease;
+  -moz-transition: all 500ms ease;
+  -ms-transition: all 500ms ease;
+  -o-transition: all 500ms ease;
+  transition: all 500ms ease;
 }
