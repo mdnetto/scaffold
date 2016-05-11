@@ -38,20 +38,27 @@ body {
 .logo {
   float: left;
   font-size: 30px;
-  color: #e8e8e8;
+  color: #ff0066;
   margin: 2%;
   font-family: 'Montserrat', sans-serif;
 }
 
 
 .nav {
-    width: 200px;
     background-color: #1e1e1e;
     float: left;
-    height: 100%;
+    width: 15%;
     clear: both;
-    position:absolute;
-    overflow:scroll;
+    overflow: scroll;
+    position: fixed;
+    margin-top: 100px;
+    /*display: inline-block;*/
+}
+/*http://stackoverflow.com/questions/15970055/scroll-inside-scroll-is-not-working*/
+.films {
+  padding-top: 8.5%;
+  width: 85%;
+  float: right;
 }
 
 .categories {
@@ -65,6 +72,11 @@ body {
 .categories li {
   padding: 20%;
   font-size: 18px;
+  color: #b7b7b7;
+}
+
+.categories a {
+  text-decoration: none;
 }
 
 .search {
@@ -72,6 +84,8 @@ body {
   height: 100px;
   text-align: center;
   background-color: #232323;
+  position: fixed;
+  z-index: 10;
 }
 
 input, select {
@@ -85,6 +99,10 @@ input, select {
   top: 12px;
   position: absolute;
   background: url('http://localhost/dvd_rental/app/assets/images/search.png');
+}
+
+.search_header {
+  margin-left: 19px;
 }
 
 input#search {

@@ -57,6 +57,20 @@ abstract class BaseMapper {
         return $models;
     }
 
+    public function getFilmsByCategory($category_id) {
+      $statement = $this->pdo->prepare("select f.film_id, f.title, f.rental_rate, f.release_year from film f
+            join film_category fc on fc.film_id = f.film_id join category c on fc.category_id = c.category_id
+            where c.category_id = '$category_id'");
+      $statement->execute();
+      $results = $statement->fetchAll();
+      $models = [];
+      foreach($results as $result) {
+        array_push($models, $this->hydrateModel($result));
+      }
+      return $models;
+    }
+
+
     public function create($model) {
         $query = "INSERT INTO {$this->getTableName()} (";
         $keys = $model->getNonIdFieldKeys();
