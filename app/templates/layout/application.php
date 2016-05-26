@@ -1,6 +1,7 @@
 <html>
 <head>
 <link rel="stylesheet" href="css/application.css" />
+<base href="http://localhost/dvd_rental/" />
 <body>
 <div class='container'>
 <!-- application layout -->
