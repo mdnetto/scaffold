@@ -2,7 +2,7 @@
 echo $sliding_nav =
 "<div class='nav'>
     <ul class='categories'>
-        <a href='category/'><li>All Films</li></a>
+        <a href='main'><li>All Films</li></a>
         <a href='category/13'><li>New</li></a>
         <a href='category/7'><li>Drama</li></a>
         <a href='category/13'><li>New</li></a>
