@@ -2,13 +2,13 @@
 
 namespace Dvd_rental\Mappers;
 
-class MainMapper extends BaseMapper {
+class CategoryMapper extends BaseMapper {
 
     protected function getModelClass() {
-        return '\Dvd_rental\Models\MainModel';
+        return '\Dvd_rental\Models\CategoryModel';
     }
 
     protected function getTableName() {
-        return 'film';
+        return 'category';
     }
 }

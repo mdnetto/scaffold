@@ -6,6 +6,7 @@ class BaseModel {
 
     const TYPE_INT = 'int';
     const TYPE_STRING = 'string';
+    const TYPE_DECIMAL = 'decimal';
 
     protected $field_map = [];
     protected $fields = [];

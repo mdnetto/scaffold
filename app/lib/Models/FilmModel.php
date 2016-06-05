@@ -8,7 +8,8 @@ class FilmModel extends BaseModel {
         'film_id' => self::TYPE_STRING,
         'title' => self::TYPE_STRING,
         'description' => self::TYPE_STRING,
-        'release_year' => self::TYPE_STRING
+        'release_year' => self::TYPE_STRING,
+        'rental_rate' => self::TYPE_DECIMAL
     ];
 }
 
