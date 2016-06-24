@@ -10,7 +10,7 @@ RewriteRule ^.*css(.*\.css) /dvd_rental/app/assets/css$1    [NC,L]
 # php routes
 RewriteRule   ^film/([0-9]+)/?$  app/pages/film.php?id=$1   [NC,L]
 RewriteRule   ^actor/([0-9]+)/?$ app/pages/actor.php?id=$1  [NC,L]
-RewriteRule   ^category/([0-9]+)/?$  app/pages/search.php?id=$1   [NC,L]
+RewriteRule   ^category/([0-9]+)/?$  app/pages/category.php?id=$1   [NC,L]
 
 RewriteRule   ^search/?$         app/pages/search.php   [NC,L]
 RewriteRule   ^$                 app/pages/search.php    [NC,L]

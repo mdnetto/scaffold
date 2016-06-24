@@ -13,9 +13,10 @@ class CategoryController extends BaseController {
       return $mapper->all();
   }
 
-//  public function displayCategories() {
-//    $mapper = $this->getMapperInstance();
-//    $models = $mapper->all();
-//    $this->render('results.php', $models);
-//  }
+  public function view($id, $col_name) {
+    $film_mapper = new \Dvd_rental\Mappers\FilmMapper();
+    $films = $film_mapper->getFilmsByCategory($id);
+    $this->render('view.php', $films);
+  }
+
 }

@@ -23,7 +23,7 @@ abstract class BaseMapper {
     }
 
     public function find($id, $col_name) {
-        $statement = $this->pdo->prepare("SELECT * FROM {$this->getTableName()} WHERE $col_name =?");
+        $statement = $this->pdo->prepare("SELECT * FROM {$this->getTableName()} WHERE {$col_name} =?");
         $statement->execute([$id]);
         $result = $statement->fetch();
         return $this->hydrateModel($result);

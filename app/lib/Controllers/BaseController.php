@@ -7,6 +7,7 @@ abstract class BaseController {
     protected abstract function getResourceName();
 
     public function render($template, $data, $term = null) {
+        $base_data = $this->getBaseTemplateData();
         $template = $this->getResourceName() . "/$template";
         include __DIR__ . "/../../templates/layout/application.php";
     }
@@ -26,6 +27,15 @@ abstract class BaseController {
     public function getMapperInstance() {
         $class = 'Dvd_rental\Mappers\\' . ucfirst($this->getResourceName()) . "Mapper";
         return new $class();
+    }
+
+    public function getBaseTemplateData() {
+        echo "We are in getBAseTemplateData";
+        $categoryMapper = new \Dvd_rental\Mappers\CategoryMapper();
+        $categories = $categoryMapper->all();
+        return [
+            "categories" => $categories
+        ];
     }
 }
 

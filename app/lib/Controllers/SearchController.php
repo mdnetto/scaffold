@@ -25,15 +25,17 @@ class SearchController extends BaseController {
   }
 
   public function sortByCategory($category_id) {
-    $mapper = $this->getMapperInstance();
-    $models = $mapper->getFilmsByCategory($category_id);
-    $this->render('results.php', $models, $category_id);
+      $mapper = $this->getMapperInstance();
+      $models = $mapper->getFilmsByCategory($category_id);
+      $this->render('results.php', $models, $category_id);
   }
 
   public function search($term) {
-    $mapper = $this->getMapperInstance();
-    $models = $mapper->searchForFilms($term);
-    $this->render('results.php', $models, $term);
+      $mapper = $this->getMapperInstance();
+      $data = $this->getBaseTemplateData();
+      $models = $mapper->searchForFilms($term);
+      $data['models'] = $models;
+      $this->render('results.php', $data, $term);
   }
 }
 
