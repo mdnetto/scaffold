@@ -1,6 +1,6 @@
 <?php
 
-namespace Dvd_rental\Helpers;
+namespace Scaffold\Helpers;
 
 class Config {
     private static $instance = NULL;
