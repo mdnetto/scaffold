@@ -1,7 +1,7 @@
 {
     "autoload": {
         "psr-4": {
-            "Scaffold\\": "app/lib/"
+            "Dvd_rental\\": "app/lib/"
         }
     },
     "require-dev": {
