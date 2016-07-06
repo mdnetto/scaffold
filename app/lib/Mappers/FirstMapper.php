@@ -1,11 +1,11 @@
 <?php
 
-namespace Dvd_rental\Mappers;
+namespace Scaffold\Mappers;
 
 class ActorMapper extends BaseMapper {
 
     protected function getModelClass() {
-        return '\Dvd_rental\Models\ActorModel';
+        return '\Scaffold\Models\ActorModel';
     }
 
     protected function getTableName() {

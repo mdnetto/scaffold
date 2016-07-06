@@ -1,6 +1,6 @@
 <?php
 
-namespace Dvd_rental\Models;
+namespace Scaffold\Models;
 
 class BaseModel {
 

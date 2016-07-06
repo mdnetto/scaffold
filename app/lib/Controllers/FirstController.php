@@ -1,6 +1,6 @@
 <?php
 
-namespace Dvd_rental\Controllers;
+namespace Scaffold\Controllers;
 
 class ActorController extends BaseController {
 

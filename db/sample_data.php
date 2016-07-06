@@ -1,11 +1,11 @@
 <?php
 require __DIR__ . '/../vendor/autoload.php';
 
-use \Dvd_rental\Models\FilmModel;
-use \Dvd_rental\Models\StoreModel;
+use \Scaffold\Models\FilmModel;
+use \Scaffold\Models\StoreModel;
 
-use \Dvd_rental\Mappers\FilmMapper;
-use \Dvd_rental\Mappers\StoreMapper;
+use \Scaffold\Mappers\FilmMapper;
+use \Scaffold\Mappers\StoreMapper;
 
 dataFillFilms();
 dataFillStore(10);

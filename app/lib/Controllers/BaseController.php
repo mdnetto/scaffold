@@ -1,6 +1,6 @@
 <?php
 
-namespace Dvd_rental\Controllers;
+namespace Scaffold\Controllers;
 
 abstract class BaseController {
 
@@ -25,13 +25,12 @@ abstract class BaseController {
     }
 
     public function getMapperInstance() {
-        $class = 'Dvd_rental\Mappers\\' . ucfirst($this->getResourceName()) . "Mapper";
+        $class = 'Scaffold\Mappers\\' . ucfirst($this->getResourceName()) . "Mapper";
         return new $class();
     }
 
     public function getBaseTemplateData() {
-        echo "We are in getBAseTemplateData";
-        $categoryMapper = new \Dvd_rental\Mappers\CategoryMapper();
+        $categoryMapper = new \Scaffold\Mappers\CategoryMapper();
         $categories = $categoryMapper->all();
         return [
             "categories" => $categories

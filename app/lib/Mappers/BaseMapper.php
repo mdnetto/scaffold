@@ -1,9 +1,9 @@
 <?php
 
-namespace Dvd_rental\Mappers;
+namespace Scaffold\Mappers;
 
-use \Dvd_rental\Helpers\Connection;
-use \Dvd_rental\Models\BaseModel;
+use \Scaffold\Helpers\Connection;
+use \Scaffold\Models\BaseModel;
 
 abstract class BaseMapper {
 
